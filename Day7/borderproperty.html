@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Property</title>
+    <style>
+        .border-box{
+            border: 3px dashed red;
+            height: 90px;
+            width: 240px;
+            border-radius: 50px;
+            background-color: aqua;
+            margin-top: 50px;
+            margin-left: 50px;
+            box-shadow: 10px 10px 10px rgb(13, 13, 211);
+            padding: 30px;
+        }
+        .box-border-individual{
+            margin-top: 30px;
+            padding-top: 50px;
+            width: 300px;
+            height: 150px;
+            border-top: 5px solid green;
+            border-bottom: 5px dotted rgb(192, 14, 163);
+            border-left: 5px double rgb(225, 82, 35);
+            border-right: 5px dashed rgb(11, 126, 178);
+        }
+        .border-image{
+            border: 20px solid;
+            margin-top: 50px;
+            border-image: url("pet.jpeg");
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Border Property</h1>
+    <div class="border-box">
+        This is box with border with,border and color radius amd shadow
+    </div>
+    <div class="box-border-individual">
+        This is box with border individual
+    </div>
+    <div class="border-image">
+        This box has image as border
+    </div>
+    
+</body>
+</html>
