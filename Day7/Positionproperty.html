@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Property</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 150px;
+            padding: 30px;
+            border: 6px double red;
+            margin: 20px;
+        }
+        .static-box{
+            background-color: blue;
+            position: static;
+            color: white;
+        }
+        .relative-box{
+            background-color: aqua;
+            position: relative;
+            color: black;
+            top: 20px;
+            left: 20px;
+        }
+        .absolute-box{
+            background-color: rgb(10, 136, 31);
+            position: absolute;
+            color: black;
+            top: 20px;
+            right: 20px;
+        }
+        .fixed-box{
+            background-color: rgb(92, 189, 237);
+            position: fixed;
+            color: black;
+            bottom: 20px;
+            left: 20px;
+        }
+        .sticky-box{
+            background-color: rgb(210, 237, 92);
+            position: sticky;
+            color: black;
+            top: 0;
+            left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box static-box">static Box</div>
+    <div class="box relative-box">relative Box</div>
+    <div class="box absolute-box">Absolute Box</div>
+    <div class="box fixed-box">fixed Box</div>
+    <div class="box sticky-box">Sticky Box</div>
+    <div style="height: 1000px;">Scroll down</div>
+</body>
+</html>
