@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element</title>
+    <style>
+        p::first-letter{
+            font-size: 200%;
+            color:rgb(112, 98, 218)
+        }
+        h2::before{
+            content: "Start";
+            color: red;
+        }
+        p::after{
+            content:"[End]";
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p>This is para1</p>
+    <p>This is para2</p>
+    <h2>Start:This is 2nd heading</h2>
+</body>
+</html>

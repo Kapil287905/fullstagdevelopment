@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combination selector</title>
+    <style>
+        /*combination*/
+        div p{
+            color: aqua;
+        }
+        div>P{
+            color: greenyellow;
+        }
+        h1~p{
+            color: rgb(157, 22, 101);
+        }
+        h1+p{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Main heading</h1>
+    <p>This para is after heading</p>
+    <p>This is another para which is sibling of heading</p>
+    <div>
+        <p>This is para inside div</p>
+        <p>This is direct child para of div</p>
+    </div>
+</body>
+</html>

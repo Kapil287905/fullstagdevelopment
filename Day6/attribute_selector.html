@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Selector</title>
+    <style>
+        a[href^='https']{
+            color: darkorange;
+        }
+        a[href$='pdf']{
+            color: gray;
+        }
+        a[href*='download']{
+            color: rgb(38, 15, 209);
+        }
+        input[type='text']{
+            background-color: black;
+        }
+        input[type='password']{
+            background-color: blue;
+        }
+        input::placeholder{
+            color: #ffffff;
+        }
+        input:focus{
+            background-color: darkmagenta;
+        }
+        input[type='submit']:active{
+            color: orchid;
+        }
+    </style>
+</head>
+<body>
+    <p>This is para</p>
+    <p>This is second para</p>
+    <ul>
+        <li>Item-1</li>
+        <li>Item-2</li>
+        <li>Item-3</li>
+        <li>Item-4</li>
+    </ul>
+    <a href="https://example.com">Visit Example Site(https)</a><br>
+    <a href="download.pdf">Download pdf</a><br>
+    <a href="file.pdf">Download File</a><br>
+    <a href="https://example.com">Visit Link</a><br>
+    <a href="https://google.com">Visit Link</a><br>
+    <input type="text" placeholder="Enter username">
+    <input type="password" placeholder="Enter password">
+    <input type="submit" placeholder="submit">
+</body>
+</html>

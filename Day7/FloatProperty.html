@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float Property</title>
+    <style>
+        .container{
+            overflow: auto;
+        }
+        .box{
+            width: 200px;
+            height: 150px;
+            padding: 30px;
+            background-color: black;
+            border: 6px double red;
+            margin: 20px;
+            color: #ffffff;
+        }
+        .box-left{
+            float: left;
+        }
+        .box-right{
+            float: right;
+        }
+        .clear-box{
+            text-align: center;
+            padding: 20px;
+            background-color: darksalmon;
+            clear:both
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box-left">Box 1 (Floted left)</div>
+        <div class="box box-right">Box 1 (Floted right)</div>
+        <div class="clear-box">Cleared content</div>
+    </div>
+</body>
+</html>
