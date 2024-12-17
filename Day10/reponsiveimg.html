@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reponeive Image</title>
+    <style>        
+        @media(min-width: 768px){
+            .img1{
+                width: 300px;
+                height: 400px;
+            }
+        }
+        @media(min-width: 1024px){
+            .img2{
+                width: 600px;
+                height: 600px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Show image as per Browser width size</h2>
+    <img class="img1" src="dog.png" alt="dog" width="200" height="200">
+    <img class="img2" src="pet.jpeg" alt="pet" width="200" height="200">
+</body>
+</html>
