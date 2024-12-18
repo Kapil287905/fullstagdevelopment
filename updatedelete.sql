@@ -60,3 +60,4 @@ insert into employeesa values('102','pooja','male','2002-1-2',600000,101,'hr,it'
 select * from employeesa;
 
 insert into employeesa values('103','meena','female','2001-11-22',400000,null,'admin','indore');
+select * from employeesa;
