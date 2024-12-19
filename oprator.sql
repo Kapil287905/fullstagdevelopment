@@ -83,4 +83,5 @@ select * from emp;
 select * from emp where ename is null or ename='';
 
 select * from emp where ename like '';
+
 select * from emp where email like null;
