@@ -94,7 +94,7 @@ select * from customers cross join orders;
 select * from customers;
 -- WQ to find customers whose address are similar
 
-
+select c1.cid,c1.cname,c1.address from customers c1,customers c2 where c1.cid!=c2.cid and c1.address=c2.address;
 
 
 
