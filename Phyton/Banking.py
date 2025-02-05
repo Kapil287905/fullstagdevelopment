@@ -12,9 +12,27 @@ while True:
             else:
                 print("Amount must be greater than or equal to 1000")
         elif choice == 2:
-            pass
+            newaccountmum=int(input("Enter yopuA/c number to verify= "))
+            if newaccountmum == accountnum:
+                creditamt=float(input("Enter credit to verify= "))
+                if creditamt > 0:
+                    amount+=creditamt
+                    print("Amount credited successfully")
+                else:
+                    print("credit amount must be greater zero")
+            else:
+                print("Invalid account number. Try again")
         elif choice == 3:
-            pass
+            newaccountmum=int(input("Enter yopuA/c number to verify= "))
+            if newaccountmum == accountnum:
+                debitamt=float(input("Enter credit to verify= "))
+                if debitamt > 0 and debitamt <= amount:
+                    amount-=debitamt
+                    print("Amount debited successfully")
+                else:
+                    print("Debit amount must be greater zero or insufficient balance")
+            else:
+                print("Invalid account number. Try again")
         elif choice == 4:
             newaccountmum=int(input("Enter yopuA/c number to verify= "))
             if newaccountmum == accountnum:
