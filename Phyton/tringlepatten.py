@@ -113,16 +113,36 @@
 #           count = count + 1
 #     print()
 
+# r = int(input("Enter row = "))
+# for i in range(1,r):
+#     for j in range(r-i):
+#         print(" ", end="")
+#     for k in range(i):
+#          print("*", end=" ")
+#     print()
+# for i in range(r):
+#     for j in range(i):
+#         print(" ", end="")
+#     for k in range(r-i):
+#          print("*", end=" ")
+#     print()
+
+# write a code tp print the following patten 
 r = int(input("Enter row = "))
-for i in range(1,r):
-    for j in range(r-i):
-        print(" ", end="")
-    for k in range(i):
-         print("*", end=" ")
-    print()
+c = int(input("Enter column = "))
+count = 1
 for i in range(r):
-    for j in range(i):
-        print(" ", end="")
-    for k in range(r-i):
-         print("*", end=" ")
+    for j in range(c):
+        if i % 2 == 0:
+            if j % 2 != 0:
+                print("*", end=" ")
+            else:
+                print(f"{count}", end=" ")
+                count = count + 1
+        else:
+            if j % 2 != 0:
+               print(f"{count}", end=" ")
+               count = count + 1 
+            else:
+                print("*", end=" ")
     print()

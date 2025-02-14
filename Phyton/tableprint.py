@@ -50,9 +50,9 @@
 #     print()
 
 # 1 to 10 table printing
-r = int(input("Enter row = "))
-c = int(input("Enter coloum = "))
-for i in range(1,r + 1):
-    for j in range(1,c + 1):
-        print(f"{i*j}", end=" ")
-    print()
+# r = int(input("Enter row = "))
+# c = int(input("Enter coloum = "))
+# for i in range(1,r + 1):
+#     for j in range(1,c + 1):
+#         print(f"{i*j}", end=" ")
+#     print()
