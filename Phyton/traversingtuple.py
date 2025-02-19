@@ -54,7 +54,7 @@ colors=("red","green","blue","white","red","grey","black","orange")
 element = input("Enter element = ").lower()
 
 flag = False
-result = ""
+result = ()
 for i in colors:
     if i == element:
         print("Element found")
