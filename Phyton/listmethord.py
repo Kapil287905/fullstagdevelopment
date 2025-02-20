@@ -64,13 +64,14 @@ print(mylist)
 # print("2nd highest",mylist[1])
 
 # show newmylist witout duplication any element
-newmylist = []
-for i in mylist:
-    if i not in newmylist:
-        newmylist.append(i)
-print(newmylist)           
+# newmylist = []
+# for i in mylist:
+#     if i not in newmylist:
+#         newmylist.append(i)
+# print(newmylist)           
 
 # count of element
+
 # find replace element
 # sum of all element
 # sum = 0
