@@ -143,23 +143,64 @@ print(books,id(books)) # 2403436159296
 # print(books.index("py")) # 0
 # print(books.index("py",3,5)) # 4
 
+books = []
 while True:
     try:
         print("welcome to my libray\n----------------------------------")
         print("1:Add book\n2:Show book\n3:update book\n4:Remove book\n5:Search book\n6:Exit")
-        choice=int(input("Enter choice number= "))
+        choice=int(input("Enter choice number = "))
         if choice == 1:
-            print("")
+            count = int(input("Enter count for book = "))
+            for i in range(count):
+                title=input(f"enter {i+1} books title = ").lower()
+                books.append(title)
+            print("Books added successfully!!")
         elif choice == 2:
-            print("")
+            if len(books) > 0:
+                print("Avaliable book",books)
+            else:
+                print("Books not Avaliable")
         elif choice == 3:
-            print("")
+            if len(books) > 0:
+                chktitle= input("Enter book to update title = ").lower()
+                if chktitle in books:
+                    print(f"{chktitle} book found")
+                    newtitle = input(f"enter new title for {chktitle} = ").lower()
+                    for i in range(len(books)):
+                        if chktitle == books[i]:
+                            books[i] = newtitle
+                    print("Book title updated successfully")
+                else:
+                    print(f"{chktitle} is not available or entred correct title")
+            else:
+                print("Books database is empty so first add books then update")
         elif choice == 4:
-            print("")
+            if len(books) > 0:
+                deltitle= input("Enter book to delete = ").lower()
+                if deltitle in books:
+                    print(f"{deltitle} book found")
+                    # for i in range(len(books)):
+                    #     if deltitle == books[i]:
+                    #         books.pop(i)   
+                    for i in books:
+                        if deltitle == i:
+                            books.remove(i)
+                    print("Book delete successfully")        
+                else:
+                    print(f"{deltitle} is not available or entred correct title")
+            else:
+                print("Books database is empty so first add books then delete")
         elif choice == 5:
-           print("")
+            if len(books) > 0:
+               chktitle= input("Enter book to update title = ").lower()
+               if chktitle in books:
+                   print(f"{chktitle} book found")
+               else:
+                    print(f"{chktitle} is not available or entred correct title")
+            else:
+                print("Books database is empty so first add books then search")
         elif choice == 6:
-            print("Thanl you for using our service!!!")
+            print("Thank you for using our service!!!")
             break
         else:
             print("Invalid choice number")
