@@ -23,7 +23,7 @@ students = [["id","name","grade"],[1,"Raj","A"],[2,"Komal","B"]]
 
 # find student name and grade for entred id by user
 print("search by id = ")
-id = int(input("enter id to find bane and grade = "))
+id = int(input("enter id to find name and grade = "))
 flag = False
 for i in students:
     if i[0] == id:
@@ -34,3 +34,4 @@ for i in students:
         
 if flag == False:
     print("id not found")
+

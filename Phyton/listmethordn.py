@@ -192,7 +192,7 @@ while True:
                 print("Books database is empty so first add books then delete")
         elif choice == 5:
             if len(books) > 0:
-               chktitle= input("Enter book to update title = ").lower()
+               chktitle= input("Enter book to search = ").lower()
                if chktitle in books:
                    print(f"{chktitle} book found")
                else:
