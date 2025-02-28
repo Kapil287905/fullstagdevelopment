@@ -62,12 +62,36 @@ Note:-
 #     return print("welcome") # not correct eay pf using print()
 # display()
  
-def display():
-    a = 5
-    b = 20
-    add = a+b
-    # reurn a+b
-    return add
+# def display():
+#     a = 5
+#     b = 20
+#     add = a+b
+#     # reurn a+b
+#     return add
 
-display()
-print(display()/5)
+# display()
+# print(display()/5)
+
+def evenodd():
+    for i in range(1,11):
+        if i % 2 == 0:
+            return
+        else:
+            print("odd number ==",i)
+
+evenodd()
+
+# perform division
+def division():
+    a=int(input("Enter a = "))
+    b=int(input("Enter b = "))
+    if b > 0:
+        div = a/b
+        # print("Division = ",round(div,2))
+        return round(div,2)
+    else:
+        # print("Denominator can't be zero")
+        return "Denominator can't be zero"
+
+# division()
+print("Division = ", division())
