@@ -6,4 +6,4 @@ def calculatesalary():
     totalsalary = perdaypay * days.totaldays()
     print(f"Name = {emp.fullname()} and total salary = {totalsalary}")
 
-calculatesalary()
+# calculatesalary()
