@@ -1,0 +1,3 @@
+import bankprogram
+
+bankprogram.main()
