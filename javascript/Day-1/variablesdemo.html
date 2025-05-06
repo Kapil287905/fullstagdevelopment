@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables Demo</title>
+</head>
+<body>
+<script>
+    // single-line comment
+    /* 
+    multi-line comment 
+    document
+    dynamic
+    real-time
+    */
+
+   // variable declaration in js via var,let,const
+   //default variable as var
+    // a; // error: a is not defined
+    var a;
+    console.log(a,typeof a)
+    console.log(a+6)// NAN (not a number)
+    console.log(a+"hello")// undefinedhello
+    var a = 45 ;
+    console.log(a,typeof a)
+    var a = 10 ;
+    console.log(a,typeof a)
+    {
+        var a = 100;
+        console.log("Inside block a =",a,typeof a)
+    }
+    console.log("Outside block a =",a,typeof a)
+    var a;
+    console.log("Redeclar block a =",a,typeof a)
+
+    //let variable
+    let x;
+    console.log(x,typeof x)
+    // let x = 10; error cannot redeclare
+    x = 23
+    console.log(x,typeof x)
+    x = 45
+    console.log(x,typeof x)
+    {
+        let x = 55;
+        console.log("Inside block x =",x,typeof x)
+    }
+    console.log("Outside block x =",x,typeof x)
+
+    //const declaration
+    //const m; initialization required
+    const m = 100
+    console.log(m,typeof m)
+    //const m = 200 ; //error cannot redeclare
+    //m = 200 //ressigment cannot be done
+    console.log(m,typeof m)
+    {
+        const m = 300;
+        console.log("Inside block m =",m,typeof m)
+    }
+    console.log("Outside block m =",m,typeof m)
+</script>   
+</body>
+</html>
