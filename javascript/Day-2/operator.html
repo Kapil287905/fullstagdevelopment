@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators</title>
+</head>
+<body>
+    <script>
+        // Arithmetic Operators
+        // let a = 10, b=20;
+        // console.log(a + b,a - b,a * b,a / b,a % b,2**2);
+        // // Relational or Comparison Operators
+        // console.log(a > b,a < b,a >= b,a <= b,a == b,a != b);
+        // let c = "10";
+        // console.log(a==c) // true (it won't check data type it only check value)
+        // console.log(a===c) // false (it will check value and data type)
+        // let d = 10;
+        // console.log(a==d,a===d) // true true
+        // console.log(a!=c,a!==c) // false true
+        // console.log(5.1=="5.1") // true
+        // console.log(5.1==="5.1") // false
+
+        //Lodical
+        // let a=5,b=6;
+        // console.log(a>b && b<a) // and false
+        // console.log(a>b || b<a) // or true
+        // console.log(!(a>b)) // not true
+        // console.log(!(a>b) && b<a) // not false
+
+        // // Bitwise
+        // console.log(a>b & b<a) // and o
+        // console.log(a>b | b<a) // or 1
+        // console.log(~(a>b)) // not -1
+        // console.log(~(a>b) & b<a) // not 1
+
+        // // increment and decrement (++,--)
+        // let n = 5;
+        // console.log(n++); // 5
+        // console.log(n); // 6
+        // console.log(++n) // 7
+        // console.log(n--)// 7
+        // console.log(n); // 6
+        // console.log(--n) // 5
+
+        // // ternary operator
+        // let k = -4;
+        // console.log(k>0?"k is positive":"k is negative") // k is negative
+        // console.log(k%2===0?"k is even number":"k is odd number") // k is even number
+
+        //instanceof operator
+        // let numbers=[1,2,3]
+        // console.log(numbers instanceof Array) // true only work with non-primitive
+        // let q=10;
+        // console.log(q instanceof Number) // false only work with non-primitive
+        // let books = {"name":"book1","price":10};
+        // console.log(books instanceof Object) // true only work with non-primitive
+        // let a=5,b=6
+        // console.log(a,b)
+        // a,b=b,a
+        // console.log(a,b) // swapping not performed
+        // a,b=100,200
+        // console.log(a,b)
+        // //x,y=11,22 error
+        // let x,y
+        // x,y=11,22
+        // console.log(x,y)
+
+        // spread operator(...) (expand element)
+        let arr1 = [1, 2, 3];
+        let arr2 = [ 4, 5]
+        let combinedarray = [arr1,arr2]
+        console.log(combinedarray) // [[1,2,3],[4,5]]
+        let combinedarray2 = [...arr1,...arr2]
+        console.log(combinedarray2) // [1,2,3,4,5]
+        let msg = "wellcome,hello"
+        let msg2 = [...msg]
+        console.log(msg2) // h,e,l,l,o
+        let obj1 = {name:"john",age:30}
+        let obj2 = {name1:"jane",age1:25}
+        let obj3 = {...obj1,...obj2}
+        console.log(obj3) // {name: 'john', age: 30, name1: 'jane', age1: 25}
+
+        // rest operator (...) Destructuring (gather remaining values)
+        let [first,...rest]=[10,20,30,40,50]
+        console.log(first) // 10
+        console.log(rest) // [20,30,40,50]
+        let {a,...others}={a:100,b:200,3:300}
+        console.log(a) // 100
+        console.log(others) // {b: 200, 3: 300}
+
+    </script>
+</body>
+</html>

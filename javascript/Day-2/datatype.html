@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Type</title>
+</head>
+<body>
+    <script>
+        // primitive Data type
+        let n = 10; 
+        document.write(typeof n, n, "<br>") // number
+        let a = 10.5;
+        document.write(typeof a, a, "<br>") // number
+        let x = 45345453453443n
+        document.write(typeof x, x, "<br>") // bigInt
+        let b = "Hello";
+        document.write(typeof b, b, "<br>") //string
+        let c = true;
+        document.write(typeof c, c, "<br>") //boolean
+        let d = null;
+        document.write(typeof d, d, "<br>") // object
+        let e = NaN;
+        document.write(typeof e, e, "<br>") // number
+        let f = undefined;
+        document.write(typeof f, f, "<br>") // undefined
+        let g = Symbol;
+        document.write(typeof g, g, "<br>") // symbol
+
+        // Non-primitive Data type
+        myarr = [34, 2, "red", 34.5, true];
+        document.write(typeof myarr, myarr, "<br>") // object (array of object)
+        o = Object()
+        document.write(typeof o, o, "<br>") // object
+        let student = {name: "John", age: 30, isMarried: true};
+        document.write(typeof student, student, "<br>") // object   
+    </script>
+</body>
+</html>
