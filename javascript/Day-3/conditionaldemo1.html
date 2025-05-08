@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional stmt</title>
+</head>
+<body>
+    <script>
+        // nested if else
+        // let n = parseInt(prompt("Enter number = "));
+        // if (n === 0) {
+        //     console.log(n,"is zero");
+        // } else {
+        //     if(n>0){
+        //         console.log(n,"is +ve number")
+        //     }else{
+        //         console.log(n,"is -ve number")
+        //     }
+        // }
+        // WAP to find gratest number among any 3 number
+        // let a = parseInt(prompt("Enter a = "));
+        // let b = parseInt(prompt("Enter b = "));
+        // let c = parseInt(prompt("Enter c = "));
+        // if (a>b && a>c) {
+        //      console.log(a,"a is gratest");
+        //  } else {
+        //     if(b>c){
+        //         console.log(b,"b is gratest");
+        //     }else{
+        //         console.log(c,"c is gratest");
+        //     }
+
+        //  }
+
+        // lasser if-else
+        // WAP to show dayname as per enter day number from 0-6
+        // let daynumber = parseInt(prompt("Enter number = "));
+        // if(daynumber==0){
+        //     console.log(daynumber,'is sunday');
+        // }else if(daynumber==1){
+        //     console.log(daynumber,'is Monday');
+        // }else if(daynumber==2){
+        //     console.log(daynumber,'is Tuesday');
+        // }else if(daynumber==3){
+        //     console.log(daynumber,'is wednesday');
+        // }else if(daynumber==4){
+        //     console.log(daynumber,'is Thusday');
+        // }else if(daynumber==5){
+        //     console.log(daynumber,'is friday');
+        // }else if (daynumber==6){
+        //     console.log(daynumber,'is saturday');
+        // }else{
+        //     console.log('Invalid day number');
+        // }
+
+        //switch stament
+
+        let a = parseInt(prompt("Enter a = "));
+        let b = parseInt(prompt("Enter b = "));
+        let choice =  prompt("Enter choice as +,-,*,/");
+        switch(choice){
+            case "+":
+                console.log("Addition",a+b);
+                break
+            case "-":
+                console.log("Subtraction",a-b);
+                break
+            case "*":
+                console.log("Multiolication",a*b);
+                break
+            case "/":
+                console.log("Division",a/b);
+                break
+            default:
+                console.log("invalid choice option. Try again");
+                break
+        }
+    </script>
+</body>
+</html>
