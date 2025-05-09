@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Built in object</title>
+</head>
+<body>
+    <script>
+        // // Date
+        // let date = new Date();
+        // console.log(date,typeof(date));
+        // console.log(date.getDate())
+
+        // // Math
+        // console.log(parseInt(Math.random()));
+        // console.log(Math.floor(Math.random()*100));
+
+        // // set
+        // let coloprs = new Set();
+        // console.log(coloprs,typeof(coloprs))
+        // coloprs.add("red");
+        // console.log(coloprs);
+        // coloprs.add("green","blue"); // adds only one element
+        // console.log(coloprs);
+        // coloprs.add("red");
+        // console.log(coloprs);
+
+        // let s = new Set("a","a","a","b"); //only one element
+        // console.log(s);
+        // let data = new Set(["a","a","a","b"]); //only one element
+        // console.log(data);
+
+        // // let fruits={'banana','apple','apple'} // error not allows use new set()
+        // // let fruits={['banana','apple','apple']} // not allows
+
+        // Map
+        let studets = new Map();
+        console.log(studets,typeof(studets))
+        studets.set("raj",89);
+        studets.set("komal",89);
+        console.log(studets);
+        
+        for (let s of studets){
+            console.log(s);
+        }
+
+
+    </script>
+</body>
+</html>

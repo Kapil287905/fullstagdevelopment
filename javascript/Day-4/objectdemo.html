@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object in Js</title>
+</head>
+<body>
+    <script>
+        // // object type-1
+        // let person = {}
+        // console.log(person)
+        // // Adding properties to the object
+        // person.fname = "pooja"
+        // person.lname = "sharma"
+        // console.log(person)
+        // person.lname = "shah"
+        // console.log(person)
+
+        // // object type-1
+        // let books = new Object;
+        // console.log(books)
+        // books.title="js"
+        // books.author="jj"
+        // books.price=600
+        // console.log(books)
+
+        // object type-3
+        let emp = {
+            name: "John",
+            jobrole: "Developer",
+            salary: 5000.00,
+            data:function (){
+                return this.name+" "+this.jobrole+" "+this.salary                
+            }
+        };
+        console.log(emp);
+        console.log(emp['name']);
+        console.log(emp.jobrole,emp.salary);
+        console.log(emp.data());
+        
+        // for-1
+        console.log(emp.length); // undefined
+        // for-in
+        for (let i in emp) {
+            console.log(emp[i]);
+        }
+        // for-of not working with object
+        // for (let i of emp) {
+        //     console.log(i);
+        // }
+
+        // foreach not working with object
+        // emp.forEach(element => {console.log(element);});
+    </script>
+    
+</body>
+</html>
