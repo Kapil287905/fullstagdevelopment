@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous and arrow</title>
+</head>
+<body>
+    <script>
+        // Anonymous function
+        let display = function() {
+            console.log("Hello, I'm an anonymous function!");
+        };
+        display();
+
+        // Arrow function
+        let show=()=>{
+            console.log("Hello, I'm an arrow function!");
+        }
+        show();
+
+        let fact=1
+        let factorial=(n)=>{
+            for(let i=1;i<=n;i++){
+                fact = fact*i
+            }            
+            return fact
+        }
+        console.log(factorial(5))
+
+        // Pure (same input , same output) and impure (as per the input, output may vary)
+        function add(){
+            // Pure
+            let a = 10, 
+            b = 20
+            return a+b
+        }
+        console.log(add())
+
+        let count = 23
+        function increment(){
+            // Impure
+            count++;
+            return count
+        }
+        console.log(increment())
+
+        function gettime(){
+            return new Date().toLocaleTimeString();
+
+        }
+        console.log(gettime())
+    
+    </script>
+</body>
+</html>

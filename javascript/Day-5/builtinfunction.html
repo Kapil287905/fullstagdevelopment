@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Built in function</title>
+</head>
+<body>
+    <script>
+        // Built-in functions call(),apply(),bind() 
+        // call() function
+        // let student={
+        //     fname:"komal",
+        //     lname:"kumar",
+        //     fullname:function(){
+        //         return this.fname+" "+this.lname;
+        //     }
+        // }
+        // console.log(student.fullname())
+        // let s1={
+        //     fname:"pooja",
+        //     lname:"shinde",
+        // }
+        // let s2={
+        //     fname:"virat",
+        //     lname:"kohli",
+        // }
+        // console.log(student.fullname.call(s1)) // read the argument seperately
+        // console.log(student.fullname.apply(s2)) // read the argument as array
+        // let ans = student.fullname.bind(s2) // bprrowing given objects elements
+        // console.log(ans())
+
+        // function test1(arg1,arg2){
+        //     console.log("test1:",num,arg1,arg2)
+        // }
+        // //test1(num=100,11,23) // incurrent
+        // test1.call((num = 100),11,23) // read the argument seperately
+
+        // function test1(arg1,arg2){
+        //     console.log("test1:",this.num,arg1,arg2)
+        // }
+        // //test1(num=100,11,23) // incurrent
+        // test1.call({num:100},11,23) // read the argument seperately
+
+        // function test2(...arg){
+        //     console.log("test2:",this.num,arg)
+        // }
+        // test2.call({num:100},[11,232,2343,45,234,24])
+        // test2.apply({num:100},[11,232,2343,45,234,24])
+        // test2.apply({num:100},[11,232,2343,45,234,24],test1.call({num:500},99,89))
+
+        // function test3(arg1){
+        //     console.log("test3:",this.num,arg1)
+        // }
+        // let output = test3.bind({num:100},900)
+        // output()
+
+        // map(),filter(),reduce()
+
+        // map example 1
+        // let numbers = [1,2,3]
+        // let sqrnumbers = numbers.map((x) => x ** 2)
+        // console.log(sqrnumbers)
+
+        // map example 2
+        // let words = ["red","blue","green"]
+        // let upperword = words.map((x) => x.toUpperCase())
+        // let upperwords = words.map((x) =>{
+        //     return x.toUpperCase()
+        // })
+        // console.log(upperword)
+        // console.log(upperwords)
+
+        // map example 3
+        // let users=[
+        //     {
+        //     name:"John",
+        //     marks:90
+        //     },
+        //     {
+        //         name:"Jane",
+        //         marks:80
+        //     }
+        // ];
+        // let names = users.map((x) => x.name)
+        // console.log(names)
+        // let data = users.map((x) =>{return x.name+" "+x.marks})
+        // console.log(data)
+
+        // filter()
+
+        // //filter example 1
+        // let numbers1 = [100,2,33,44,200,45,67,23]
+        // let evennumbers = numbers1.filter((x) => x % 2 == 0)
+        // console.log(evennumbers)
+
+        // // filter example 2
+        // let values = [0,"hello",false,"",89,null]
+        // let truevalues=values.filter(Boolean)
+        // console.log(truevalues)
+
+        // // filter example 3
+        // let product = [
+        //     {
+        //         name:"laptop",
+        //         instock:true,
+        //     },
+        //     {
+        //         name:"mobile",
+        //         instock:false
+        //     }
+        // ]
+        // let avilable = product.filter((x) => x.instock)
+        // console.log(avilable)
+        // for(let i of avilable){
+        //     console.log(i)
+        // }
+
+        // reduce()
+        // reduce example 1
+        let numbers = [1,2,34,5,45,3]
+        let sum = numbers.reduce((x,y) => x+y,0)
+        console.log(sum)
+        let highest= numbers.reduce((max,Current) => (Current>max ? Current:max),numbers[0])
+        console.log(highest)        
+
+    </script>
+</body>
+</html>

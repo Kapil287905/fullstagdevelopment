@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user Function</title>
+</head>
+<body>
+    <script>
+        // Function type 1) Traditional 2) Anonymous 3) Arrow 4) built-in
+        // user defined function 1) dafault 2) with parameter but without return type 
+        // 3) without parameter but with return type 
+        // 4) with parameter but with return type
+
+        // // type-1
+        // demo()
+        // function demo(){
+        //     console.log("Hello World");
+        // }
+
+        // //type-2
+        // function demo(msg){
+        //     console.log("type-2 demo",msg);
+        // }
+        // demo("user function")
+
+        // type-3
+        // function demo(){
+        //     return "Hello World";
+        // }
+        // console.log(demo());
+
+        // type-4
+        // function add(a,b){
+        //     return a+b;
+        // }
+        // console.log(add(45,56))
+
+        // paramters demo 1
+        // function add(a = 10,b){
+        //     return a+b;
+        // }
+        // console.log(add(45,56))
+        // console.log(add(56)); //NaN
+
+        // paramters demo 2
+        // function add(a,b=10){
+        //     return a+b;
+        // }
+        // console.log(add(45,56))
+        // console.log(add(56)); //66
+
+        // parameters demo 3
+        // function add(a=40,b=10){
+        //     return a+b;
+        // }
+        // console.log(add(45,56))
+        // console.log(add(56)); // 66
+        // console.log(add()); // 50
+
+        // parameters demo 4 (...rest)
+        function add(a,b,...rest){
+            return a+b+rest[0];
+        }
+        console.log(add(45,56,78)); // 159
+        console.log(add(45,56)); // NaN
+        console.log(add(45)); // NaN
+        console.log(add()); // NaN
+    
+        function colors(...rest){
+            return rest;
+        }
+        console.log(colors("red","green","blue")); //["red","green","blue"]
+    </script>
+</body>
+</html>
