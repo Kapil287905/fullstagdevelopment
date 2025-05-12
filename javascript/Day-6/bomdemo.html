@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM Demo</title>
+</head>
+<body>
+    <button onclick="demo()">Close</button><br>
+    <script>
+        // BOM
+        // window
+        document.write("window width = "+ window.innerWidth + "<br>");
+        document.write("window heigth = "+ window.innerHeight + "<br>");
+
+        document.write("Navigator AppName = "+ navigator.appName + "<br>")
+        document.write("Navigator Cookie = "+ navigator.cookieEnabled + "<br>")
+        document.write("Navigator language = "+ navigator.language + "<br>")
+
+        document.write("Screen Heigth = " + screen.height + "<br>")
+        document.write("Screen Width = " + screen.width + "<br>")
+        document.write(window.location);
+
+        // popup alert
+        // alert("Hello World");
+        // window.alert("goodmorning")
+
+        // confirm("Are you sure")
+
+        // demo of confirm box
+        // let confirmResult = confirm("Are you sure you want to delete this file?");
+        // if (confirmResult == true){
+        //     alert("You clicked OK");
+        // }else{
+        //     alert("You clicked Cancel");
+        //     window.location.href = "https://www.google.com";
+        // }
+
+        // prompt box
+
+        // let name = prompt("What is your name");
+
+        // settimeout()
+        // setTimeout(function(){
+        //     open("https://www.google.com");
+        // }, 1000);
+
+        function demo(){
+            setTimeout(function(){
+            alert("Bye Bye!!!")
+            open("https://www.google.com");            
+            close()
+        }, 1000);
+        }
+
+    </script>
+    
+</body>
+</html>

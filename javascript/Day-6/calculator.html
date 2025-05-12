@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+<body>
+    <center>
+        <h1>Calculator APP</h1>
+        <label for="n1">Enter number-1</label>
+        <input type="number" id="n1" name="n1" required>
+        <br>
+        <label for="n2">Enter number-2</label>
+        <input type="number" id="n2" name="n2" required>
+
+        <h3><mark id="output"></mark></h3>
+        <button onclick="add()">+</button>
+        <button onclick="sub()">-</button>
+        <button onclick="mul()">*</button>
+        <button onclick="did()">/</button>
+        <button onclick="Clear()">Clear</button>
+
+    </center>
+    <script>
+        document.getElementById("output").innerHTML = "0";        
+        function add(){
+            let n1 = document.getElementById("n1").value;
+            let n2 = document.getElementById("n2").value;
+            let result = parseInt(n1) + parseInt(n2);
+            document.getElementById("output").innerHTML = result;
+        }
+        function sub(){
+            let n1 = document.getElementById("n1").value;
+            let n2 = document.getElementById("n2").value;
+            let result = parseInt(n1) - parseInt(n2);
+            document.getElementById ("output").innerHTML = result;
+        }
+        function mul(){
+            let n1 = document.getElementById("n1").value;
+            let n2 = document.getElementById("n2").value;
+            let result = parseInt(n1) * parseInt(n2);
+            document.getElementById("output").innerHTML = result;
+        }
+        function did(){
+            let n1 = document.getElementById("n1").value;
+            let n2 = document.getElementById("n2").value;
+            let result = parseInt(n1) / parseInt(n2);
+            document.getElementById("output").innerHTML = result;
+        }
+        function Clear(){
+            let n1 = document.getElementById("n1").value;
+            let n2 = document.getElementById("n2").value;
+            document.getElementById("output").innerHTML = "0";
+            document.getElementById("n1").value = "";
+            document.getElementById("n2").value = "";
+        }
+
+
+    </script>    
+</body>
+</html>
