@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SignUP</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />    
+  </head>
+  <body>
+    <!-- header starts here -->
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              BANK
+            </a>
+
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="singup.html">SignUP</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="singin.html">SignIN</a>
+                </li>                
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- header ends here -->
+
+    <div class="container mt-5 d-flex justify-content-center">
+      <div class="row">
+        <h1 class="text-center">SignUP</h1>    
+        <form id="signupform">          
+          <div class="mb-3">
+            <label for="uemail" class="form-label">Email address</label>
+            <input
+              type="email"
+              class="form-control"
+              id="uemail"
+              aria-describedby="emailHelp"
+              name="uemail"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="upass" class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="upass"
+              name="upass"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="ucpass" class="form-label"
+              >Confirm Password</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="ucpass"
+              name="ucpass"
+              required
+            />
+          </div>
+        
+          <button type="submit" class="btn btn-primary">Signup</button>
+          <button type="reset" class="btn btn-danger">Cancel</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- footer starts here -->
+    <div class="container">
+      <div class="row">
+        <footer>
+          <h2>&copy; Copyright ITV Pvt Ltd 25-26</h2>
+        </footer>
+      </div>
+    </div>
+    <!-- footer ends here -->
+     <script>
+      document.getElementById("signupform").addEventListener("submit",function(addEventListener){
+        event.preventDefault();
+        let uemail = document.getElementById("uemail").value;
+        let upass = document.getElementById("upass").value;
+        let ucpass = document.getElementById("ucpass").value;
+        console.log(uemail,upass,ucpass)
+        if(upass===ucpass){
+          localStorage.setItem('uemail',uemail);
+          localStorage.setItem('upass',upass);
+          window.location.href="singin.html"
+        }else{
+          alert("Password and confirm password dose not match.\n Try again...")
+          document.getElementById("upass").value="";
+          document.getElementById("ucpass").value="";
+        }
+      })
+     </script>
+    <script src="js/bootstrap.bundle.min.js"></script>    
+  </body>
+</html>

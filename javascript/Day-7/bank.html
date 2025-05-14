@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bank</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />    
+  </head>
+  <body>
+    <!-- header starts here -->
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              BANK
+            </a>
+
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="singup.html">SignUP</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="singin.html">SignIN</a>
+                </li>               
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- header ends here -->
+
+    <div class="container mt-5 d-flex justify-content-center">
+        <div class="row">
+           <h1 class="text-center" id="msg"></h1>
+           <p class="text-center" id="dateon"></p>       
+           <hr>
+           <a href="singin.html">Logout</a>
+           <form action="">
+            <input type="number" id="amount" placeholder="Enter amount" required>
+            <br><br>
+            <h1><mark id="output"></mark></h1>
+            <button onclick="showbalabce()">Show Balance</button>
+            <button onclick="creditamt()">Credit Amount</button>
+            <button onclick="debitamt()">Debit Amount</button>
+           </form>
+        </div>
+    </div>
+
+    <!-- footer starts here -->
+    <div class="container">
+      <div class="row">
+        <footer>
+          <h2>&copy; Copyright ITV Pvt Ltd 25-26</h2>
+        </footer>
+      </div>
+    </div>
+    <!-- footer ends here -->
+     <script>
+        let d= new Date()
+        document.getElementById('dateon').innerHTML=d
+        let uemail=localStorage.getItem('uemail')
+        document.getElementById('msg').innerHTML="Welcome"+" "+uemail;
+        let balance=0
+        function showbalabce(){
+            event.preventDefault();
+            document.getElementById('output').innerHTML="Current Balance ="+" "+balance
+
+        }
+        function debitamt(){
+            event.preventDefault();
+            let damount=parseFloat(document.getElementById('amount').value);
+            console.log(damount)
+            console.log(damount,balance)
+            balance-=damount;
+            document.getElementById('output').innerHTML="Amount debited successfully"
+            parseFloat(document.getElementById('amount').value="");
+            
+        }
+        function creditamt(){
+            event.preventDefault();
+            let camount=parseFloat(document.getElementById('amount').value);
+            console.log(camount,balance)
+            balance+=camount;
+            document.getElementById('output').innerHTML="Amount credited successfully"
+            parseFloat(document.getElementById('amount').value="");
+            console.log(camount)   
+        }
+     </script>
+    <script src="js/bootstrap.bundle.min.js"></script>    
+  </body>
+</html>
