@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Product</title>
+</head>
+<body>
+    <h1>Product API Data</h1>
+    <hr>
+    <h3 id="output"></h3>
+    <button onclick="fetchproduct()">Retch Product data</button>
+    <script>
+        // Fetching data from API
+        let fetchproduct = () =>{
+            fetch('https://dummyjson.com/products?limit=0')
+            .then(res => res.json())
+            .then(data =>{
+                console.log(data);
+                for (let x in data.products){
+                    document.getElementById('output').innerHTML+=data.products[x].id+" "+data.products[x].title+" "+data.products[x].price+"<br>";
+                }
+            })            
+        }
+    </script>    
+</body>
+</html>

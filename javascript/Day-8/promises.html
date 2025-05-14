@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBack with promises</title>
+</head>
+<body>
+    <script>
+        function getPromise() {
+            return new Promise((resolve, reject) =>
+            {
+                setTimeout(() =>
+                {
+                    console.log("Promise resolved");
+                }, 5000);
+            });
+        }
+
+        function sendmail(){
+            return new Promise((resolve, reject) =>{
+                setTimeout(() =>
+                {
+                    console.log("Mail sent");
+                }, 7000);
+            })
+        }
+
+        getPromise().then (sendmail())
+
+        
+    </script>
+</body>
+</html>

@@ -89,21 +89,34 @@
         function debitamt(){
             event.preventDefault();
             let damount=parseFloat(document.getElementById('amount').value);
-            console.log(damount)
-            console.log(damount,balance)
-            balance-=damount;
-            document.getElementById('output').innerHTML="Amount debited successfully"
-            parseFloat(document.getElementById('amount').value="");
+            if (isNaN(damount)) {
+                // Handle the NaN case
+                alert("The input is not a valid number.");
+            } else {
+                // It's a valid number
+                console.log(damount)
+                console.log(damount,balance)
+                balance-=damount;
+                document.getElementById('output').innerHTML="Amount debited successfully"
+                parseFloat(document.getElementById('amount').value=""); 
+            }
             
         }
         function creditamt(){
             event.preventDefault();
             let camount=parseFloat(document.getElementById('amount').value);
-            console.log(camount,balance)
-            balance+=camount;
-            document.getElementById('output').innerHTML="Amount credited successfully"
-            parseFloat(document.getElementById('amount').value="");
-            console.log(camount)   
+            if (isNaN(camount)) {
+                // Handle the NaN case
+                alert("The input is not a valid number.");
+            } else {
+                // It's a valid number
+                console.log(camount,balance)
+                balance+=camount;
+                document.getElementById('output').innerHTML="Amount credited successfully"
+                parseFloat(document.getElementById('amount').value="");
+                console.log(camount)  
+            }
+             
         }
      </script>
     <script src="js/bootstrap.bundle.min.js"></script>    

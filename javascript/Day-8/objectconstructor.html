@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Constructor</title>
+</head>
+<body>
+    <h3 id="output"></h3>
+    <script>
+        // Define a constructor function
+        function Person(fname,lname,age,salary) {
+            this.fname = fname;
+            this.lname = lname;
+            this.age = age;
+            this.salary = salary;
+        }
+        let p1 = new Person('John', 'Doe', 30, 50000);
+        let p2 = new Person('pooja', 'shah', 25, 40000);
+
+        Person.prototype.city="Mumbai";
+
+        let myfather = new Person('Rahul', 'Sharma', 35, 60000)
+        let mymother = new Person('Neha', 'Kumar', 35, 60000)
+        document.getElementById('output').innerHTML="My Father Detail are"+myfather.fname+" "+myfather.lname+" "+myfather.age+" "+myfather.salary+"<br>"+"My Mother Detail are"+mymother.fname+" "+mymother.lname+" "+mymother.age+" "+mymother.salary+"<br>"
+
+        document.write(p1.fname+" "+p1.lname+" "+p1.age+" "+p1.salary+" "+p1.city+"<br>");
+        document.write(p2.fname+" "+p2.lname+" "+p2.age+" "+p2.salary+" "+p2.city+"<br>");
+    </script>
+</body>
+</html>

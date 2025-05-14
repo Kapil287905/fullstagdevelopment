@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBack</title>
+</head>
+<body>
+    <script>        
+        function register(CallBack) 
+        {            
+            setTimeout(()=>{                
+                console.log("register")
+                CallBack();
+            }, 5000);            
+        }        
+        function sendmail(CallBack){
+            setTimeout(()=>{                
+                console.log("send mail")
+                CallBack();
+            }, 2000); 
+        }
+        register(function(){
+            sendmail(function(){})
+        })
+    </script>
+</body>
+</html>
