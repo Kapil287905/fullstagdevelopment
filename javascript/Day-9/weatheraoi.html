@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather APP</title>
+</head>
+<body>
+    <center>
+        <h1>Weather Detail</h1>
+        <hr>
+        <form>
+            <input type="number" id="latitude" placeholder="Enter latitude coordinate"><br><br>
+            <input type="number" id="longitude" placeholder="Enter longitude coordinate"><br><br>
+            <h3 id="output"></h3>
+            <input type="submit"  value="Get Weather" onclick="getWeather()">
+            <input type="reset" value="Reset">
+        </form>
+    </center>
+    <script>
+        let getWeather=()=> {
+            let lat = parseFloat(document.getElementById("latitude").value);
+            let long = parseFloat(document.getElementById("longitude").value);
+            console.log(lat,long)
+            fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lat}&current_weather=true`)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                document.getElementById("output").innerHTML = `Temperature: ${data.current_weather.temperature}°C <br>`
+                document.getElementById("output").innerHTML += `Wind direction: ${data.current_weather.winddirection}<br>`
+                document.getElementById ("output").innerHTML += ` Wind speed" ${data.current_weather.windspeed} m/s`
+            })
+        }
+    </script>
+</body>
+</html>
