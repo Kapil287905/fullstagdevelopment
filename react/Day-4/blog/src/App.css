@@ -1,0 +1,9 @@
+.bolog-container{
+  text-align: center;
+}
+
+.bolog-image{
+  width: 50%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
