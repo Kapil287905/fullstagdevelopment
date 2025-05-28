@@ -8,7 +8,7 @@ export default function ProductDetails(){
         let response=await fetch(`https://dummyjson.com/products/${id}`)
         let data=await response.json()
         console.log(data)
-        setProducts(data.products)
+        setProducts(data)
     }
     useEffect(()=>{
         fetchproductdetails()

@@ -1,12 +1,13 @@
+import { Outlet } from "react-router-dom"
 import AllUser from "./components/AllUser"
-import Product from "./components/product"
+import Product from "./components/Product"
 
 function App() {
 
   return (
     <>
-     <Product/>
-     <outlet/>
+     {/* <Product/> */}
+     <Outlet/>    
     </>
   )
 }

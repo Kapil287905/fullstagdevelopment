@@ -6,7 +6,7 @@ import "../node_modules/bootstrap/dist/js/bootstrap.bundle.js"
 
 import { createBrowserRouter,RouterProvider } from 'react-router-dom'
 import ProductDetails from './components/ProductDetails.jsx';
-import Product from './components/product.jsx';
+import Product from './components/Product.jsx';
 
 let routes=createBrowserRouter([
   {
