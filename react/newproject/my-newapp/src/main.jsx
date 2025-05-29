@@ -7,6 +7,8 @@ import "../node_modules/bootstrap/dist/js/bootstrap.bundle.js"
 import { createBrowserRouter,RouterProvider } from 'react-router-dom'
 import ProductDetails from './components/ProductDetails.jsx';
 import Product from './components/Product.jsx';
+import SignUP from './components/SignUP.jsx';
+import SignIN from './components/SignIN.jsx';
 
 let routes=createBrowserRouter([
   {
@@ -14,7 +16,9 @@ let routes=createBrowserRouter([
     element:<App/>,
     children:[
       {path:'',element:<Product/>},
-      {path:'/productdetails/:id',element:<ProductDetails/>}
+      {path:'/productdetails/:id',element:<ProductDetails/>},
+      {path:'/signup',element:<SignUP/>},
+      {path:'/signin',element:<SignIN/>}
     ]
   }
 ])
