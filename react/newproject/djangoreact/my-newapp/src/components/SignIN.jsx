@@ -35,14 +35,13 @@ export default function SignIN(){
         if(Object.keys(validateErrors).length===0){
             console.log(formData.uemail,formData.upass)
             setSubmitted(true)
-            window.location.href='/'
+            window.location.href='/regesterproduct'
         }
         else{
             setSubmitted(false)
         }
     }
-
-
+    
 
     return(
         <>
